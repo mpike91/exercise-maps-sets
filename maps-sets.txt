@@ -1,0 +1,20 @@
+Quick Question #1:
+1,2,3,4
+
+Quick Question #2:
+ref
+
+Quick Question #3:
+{[1,2,3]:true,
+[1,2,3]:false}
+
+hasDuplicate:
+const hasDuplicate = array => [...new Set(array)].length !== array.length;
+
+vowelCount:
+const vowelCount = ([...str]) => {
+    const vowels = str.filter(char => "aeiou".includes(char));
+    const map = new Map();
+    for (let char of vowels) !map.has(char) ? map.set(char, 1) : map.set(char, map.get(char) + 1);
+    return map;
+}
